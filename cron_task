@@ -1,0 +1,2 @@
+0 23 * * * . /project_env.sh; bash /app/cron_executable.sh >> /var/log/cron.log 2>&1
+# An empty line is required at the end of this file for a valid cron file.
