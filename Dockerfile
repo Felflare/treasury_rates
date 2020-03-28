@@ -20,6 +20,7 @@ COPY cron_task /etc/cron.d/cron_task
 
 # Give execution rights on the cron job
 RUN chmod 0644 /etc/cron.d/cron_task
+RUN chmod 0744 -R /app/
 
 # Apply cron job
 RUN crontab /etc/cron.d/cron_task
@@ -30,4 +31,4 @@ RUN touch /var/log/cron.log
 EXPOSE 80
 
 # Run the command on container startup
-CMD cron && tail -f /var/log/cron.log
+CMD ["cron", "-f"]

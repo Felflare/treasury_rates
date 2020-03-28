@@ -3,11 +3,13 @@ PATH=/home/ubuntu/anaconda3/bin:/home/ubuntu/bin:/home/ubuntu/.local/bin:/usr/lo
 
 
 
-cd app/data_pull
+cd /app/app/data_pull
 python pull_data.py
 python process_csv.py
 
+echo "Stopping old servers"
 killall gunicorn
-sleep 30
+sleep 10
 cd /app
+echo "Starting servers"
 bash start.sh

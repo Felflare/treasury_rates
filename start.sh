@@ -21,4 +21,6 @@ export GUNICORN_CONF=${GUNICORN_CONF:-$DEFAULT_GUNICORN_CONF}
 
 
 # Start Gunicorn
-exec gunicorn -D -k egg:meinheld#gunicorn_worker -c "$GUNICORN_CONF" "$APP_MODULE"
+echo "$APP_MODULE"
+echo "$GUNICORN_CONF"
+gunicorn -D -k egg:meinheld#gunicorn_worker -c "$GUNICORN_CONF" "$APP_MODULE"
