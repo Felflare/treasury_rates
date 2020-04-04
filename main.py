@@ -104,7 +104,7 @@ app.layout = html.Div(
                 html.Div(
                     [
                         dcc.Markdown(
-                            """The graph built by [@Daulet Nurmanbetov](). Feel free to reach out to me to grab coffee together ☕ 
+                            """The graph built by [@Daulet Nurmanbetov](http://www.dauletn.com). Feel free to reach out to me to grab coffee together ☕ 
                             
                             This graph was inspired by [Plotly Dash](https://github.com/plotly/dash-sample-apps/tree/master/apps/dash-yield-curve)
                             """.replace(

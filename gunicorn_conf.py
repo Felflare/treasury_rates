@@ -7,6 +7,7 @@ web_concurrency_str = os.getenv("WEB_CONCURRENCY", None)
 threads = os.getenv("THREADS", "4")
 host = os.getenv("HOST", "0.0.0.0")
 port = os.getenv("PORT", "80")
+logfile= os.getenv("LOGFILE","/app/gunicorn.log")
 worker_tmp_dir = os.getenv("TMP_DIR", "/dev/shm")
 bind_env = os.getenv("BIND", None)
 use_loglevel = os.getenv("LOG_LEVEL", "info")
@@ -33,6 +34,8 @@ errorlog = "-"
 
 # For debugging and testing
 log_data = {
+    "log-file": logfile,
+    "capture_output": True,
     "loglevel": loglevel,
     "workers": workers,
     "threads": threads,

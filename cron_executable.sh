@@ -13,3 +13,5 @@ sleep 10
 cd /app
 echo "Starting servers"
 bash start.sh
+ps -ef
+echo ""
