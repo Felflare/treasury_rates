@@ -23,4 +23,4 @@ export GUNICORN_CONF=${GUNICORN_CONF:-$DEFAULT_GUNICORN_CONF}
 # Start Gunicorn
 echo "$APP_MODULE"
 echo "$GUNICORN_CONF"
-gunicorn -D -k gevent -c "$GUNICORN_CONF" "$APP_MODULE"
+gunicorn -D -k gevent --log-config "$LOG_CONFIG_FILE" -c "$GUNICORN_CONF" "$APP_MODULE"
