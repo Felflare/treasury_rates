@@ -106,7 +106,7 @@ app.layout = html.Div(
                         dcc.Markdown(
                             """The graph built by [@Daulet Nurmanbetov](https://dauletn.com/). Feel free to reach out to me to grab coffee together ☕ 
                             
-                            This graph was inspired by [Plotly Dash](https://github.com/plotly/dash-sample-apps/tree/master/apps/dash-yield-curve)
+                            This app Pulls data daily from [US. Department of Treasury](https://www.treasury.gov/resource-center/data-chart-center/interest-rates/pages/textview.aspx?data=yield) to update the graph with today's treasury yields.
                             """.replace(
                                 "  ", ""
                             ),
