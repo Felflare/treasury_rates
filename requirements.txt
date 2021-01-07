@@ -3,5 +3,5 @@ dash==1.9.1
 pandas==1.0.3
 requests==2.23.0
 bs4==0.0.1
-lxml==4.5.0
+lxml==4.6.2
 gevent==1.4.0
